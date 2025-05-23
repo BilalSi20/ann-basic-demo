@@ -1,0 +1,35 @@
+Basit Bir Yapay Sinir Ağı (ANN) Denemesi
+Tarih: 2025-05-23
+Hazırlayan: Bilal
+
+Projenin Amacı
+Bu projede, yapay sinir ağlarının (ANN) temel çalışma mantığını öğrenmek, PyTorch ile nasıl kurulduğunu, nasıl eğitildiğini ve nasıl test edildiğini anlamak amacıyla basit bir sınıflandırma ağı oluşturdum.
+
+
+Proje Süreci
+
+BilalNet adında basit bir fully connected ağ :
+
+Giriş katmanı: 784 nöron (28x28)
+Gizli katman: 128 nöron (ReLU aktivasyon)
+Çıkış katmanı: 10 nöron (sınıflar: 0–9)
+
+Epoch denemeleri :
+
+0 epoch %10.47 doğruluk (10 çıktı bulunduğu için direkt rastgele tahmin yapıyor)
+1 epoch %89.30 doğruluk
+2 epoch %90.88 doğruluk
+3 epoch %91.53 doğruluk
+4 epoch %92.40 doğruluk
+5 epoch %92.79 doğruluk
+100 epoch %97.82 doğruluk
+
+lr = 0.01 : Dengeli sonuç
+lr = 0.001 : Doğruluk düştü.
+lr = 1 : Loss değeri atlaya atlaya daha hızlı doğru sonuçlara yaklaştı ama tutarsız
+lr = 10 : Loss uçtu, model rastgele tahmin yaptı (%10 doğruluk :D)
+
+
+Sonuç
+Bu proje sayesinde yapay sinir ağlarının temel yapısını, eğitim-tahmin sürecini ve PyTorch'ta kullanılan fonksiyonların görevlerini hazır bir yapıdan kopyalayıp yazdığım kodlarla deneyimleyerek öğrendim.
+İlerleyen aşamalarda bu temeli kullanarak daha gelişmiş CNN, RNN gibi yapılara geçmeyi planlıyorum.
